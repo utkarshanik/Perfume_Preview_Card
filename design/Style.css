@@ -1,0 +1,212 @@
+
+
+body
+{
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    background-color: hsl(26.25deg 40% 92.16%);
+}
+
+.container
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card
+{
+    /* Dont use max because margin auto will not have any impact */
+    
+    width: 50vw;
+    height:70vh;
+    margin: auto;
+    border-radius: 3%;
+    background-color:#ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:start;
+    overflow: hidden;
+}
+
+.image
+{
+    min-width: 50%;
+    max-height: 70vh;
+    border-radius: inherit;
+}
+
+.image img
+{
+    width : 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info
+{
+    margin: 5% 5%;
+    color: hsl(228, 12%, 48%)
+}
+
+.info #title
+{
+    letter-spacing: 0.3em;
+}
+
+.info h1
+{
+    color:hsl(212, 21%, 14%);
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1em;
+    font-family: "Fraunces", serif;
+}
+
+.price-Card
+{
+    margin-top: 10%;
+    font-family: "Fraunces", serif;
+}
+
+.info #price
+{
+    font-size: 3em;
+    font-weight: 999;
+    color: #3a8369;
+}
+
+.info #cprice
+{
+    text-decoration: line-through;
+    vertical-align:0.8em;
+    padding-left: 3%;
+}
+
+.button
+{
+    width: 100%;
+    /* height: 4em; */
+    display: inline-block;
+    background-color: #3a8369;
+    margin: 8% auto;
+    display: inline-block;
+    border-radius: 1rem;
+    border: none;
+    padding: 20px;
+}
+
+.button a{
+    color: white;
+    font-size: 1em;
+    font-weight: bolder;
+    text-decoration: none;
+    padding-left: 5%;
+
+}
+
+.button img{
+    vertical-align: text-top;
+}
+
+.button:hover
+{
+    background-color:#2f5c4c;
+    cursor: pointer;
+}
+
+
+/* General Media Query for Small Screens */
+
+@media screen and (max-width: 768px) {
+    .card {
+      flex-direction: column; /* Stack image and info vertically */
+      width: 90vw; /* Reduce card width */
+      height: auto; /* Allow height to adjust naturally */
+    }
+    
+    .info
+    {
+        text-align: left;
+    }
+    
+    .image {
+      width: 100%; /* Make image span full width */
+      height: 50vh; /* Restrict image height */
+    }
+  
+    .info {
+      margin: 5%; /* Adjust margins for better spacing */
+      text-align: center; /* Center-align text for smaller screens */
+    }
+  
+    .info h1 {
+      font-size: 2em; /* Reduce heading size */
+    }
+  
+    .info #price {
+      font-size: 2em; /* Adjust price size */
+    }
+  
+    .button {
+      padding: 15px; /* Reduce button padding */
+      width: 80%; /* Restrict button width */
+    }
+  }
+  
+  /* Media Query for Very Small Screens */
+  @media screen and (max-width: 480px) {
+    body {
+      font-size: 12px; /* Smaller font size for better readability */
+    }
+  
+    .card {
+        border-radius: 5%; /* Increase card roundness for aesthetic */
+    }
+    
+    .info
+    {
+        text-align: left;
+    }
+    
+    .info h1 {
+      font-size: 1.8em; /* Further reduce heading size */
+    }
+  
+    .info #price {
+      font-size: 1.5em; /* Adjust price font size */
+    }
+  
+    .button {
+      padding: 10px; /* Further reduce padding */
+      font-size: 0.9em; /* Adjust font size in button */
+    }
+  }
+  
+  /* Media Query for Screen Size 370px */
+  @media screen and (max-width: 370px) {
+    .card {
+      width: 95vw; /* Maximize card width */
+    }
+    
+    .info
+    {
+        text-align: left;
+    }
+    
+    .info h1 {
+      font-size: 1.5em; /* Reduce font size for title */
+    }
+    
+    .info #price {
+      font-size: 1.2em; /* Adjust price font size */
+    }
+  
+    .button {
+      width: 100%; /* Button spans full width */
+      padding: 8px; /* Minimal padding */
+    }
+  }
+  
