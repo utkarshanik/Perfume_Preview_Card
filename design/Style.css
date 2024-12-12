@@ -69,7 +69,10 @@ body
 {
     margin-top: 10%;
     font-family: "Fraunces", serif;
-}
+    display: flex;
+    align-items: center;
+    gap: 8%;
+  }
 
 .info #price
 {
@@ -81,8 +84,6 @@ body
 .info #cprice
 {
     text-decoration: line-through;
-    vertical-align:0.8em;
-    padding-left: 3%;
 }
 
 .button
